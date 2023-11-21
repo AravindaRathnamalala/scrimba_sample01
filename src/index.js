@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
-import logo from './logo.svg';
+import logo from "./logo.svg";
 
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
@@ -18,15 +18,28 @@ import reportWebVitals from "./reportWebVitals";
 // // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 // reportWebVitals();
 
-function Page() {
+const Header = () => {
   return (
-    <>
-      <header>
-        <nav>
-          <img src={logo} width="40px" />
-        </nav>
-      </header>
+    <header>
+      <nav>
+        <img src={logo} width="40px" />
+      </nav>
+    </header>
+  );
+};
 
+const Footer = () => {
+  return (
+    <footer>
+      <p> All right resevred &copy; 2023</p>
+    </footer>
+  );
+};
+
+const MainComponent = () => {
+  return (
+    <div>
+      <h1>Reasons I'm excited to learn React</h1>
       <ol>
         <li>Was first released in 2013</li>
         <li>Was originally created by Jordan Walke</li>
@@ -34,10 +47,15 @@ function Page() {
         <li>Is maintained by Facebook</li>
         <li>Powers thousands of enterprise apps, including mobile apps</li>
       </ol>
-
-      <footer>
-        <p> All right resevred &copy; 2023</p>
-      </footer>
+    </div>
+  );
+};
+function Page() {
+  return (
+    <>
+      <Header />
+      <MainComponent />
+      <Footer />
     </>
   );
 }
