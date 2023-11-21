@@ -21,8 +21,13 @@ import reportWebVitals from "./reportWebVitals";
 const Header = () => {
   return (
     <header>
-      <nav>
-        <img src={logo} width="40px" />
+      <nav className="nav">
+        <img className="nav-logo" src={logo} />
+        <ul className="nav-items">
+          <li>Pricing</li>
+          <li>About</li>
+          <li>Contact</li>
+        </ul>
       </nav>
     </header>
   );
@@ -30,7 +35,7 @@ const Header = () => {
 
 const Footer = () => {
   return (
-    <footer>
+    <footer className="footer-scrim">
       <p> All right resevred &copy; 2023</p>
     </footer>
   );
